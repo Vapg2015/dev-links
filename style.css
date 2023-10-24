@@ -1,3 +1,5 @@
+/* DARKMODE */
+
 :root {
   /* DAKR MODE
   --stroke-color-dark-mode: rgba(255, 255, 255, 0.5);
@@ -18,14 +20,10 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.1);
-  --root-bg-url: url(./assets/MoonStars.svg);
+  --switch-bg-url: url(./assets/MoonStars.svg);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/* LIGHTMODE */
 
 .light {
   --text-color: rgba(0, 0, 0, 1);
@@ -37,6 +35,12 @@
   --switch-bg-url: url(./assets/Sun.svg);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -45,6 +49,7 @@ body {
 
   /* background: color image repeat position/size; */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -55,7 +60,8 @@ body * {
 /* CONTAINER PRINCIPAL */
 
 .container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -184,4 +190,16 @@ body * {
 footer {
   padding: 24px 0;
   text-align: center;
+}
+
+/* DESKTOP */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
